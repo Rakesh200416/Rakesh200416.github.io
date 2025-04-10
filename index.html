@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rakesh Ravikumar</title>
+  <link rel="icon" type="image/png" href="photo/logo.png" />
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+  (function(){
+    emailjs.init("YOUR_EMAILJS_USER_ID"); // Replace this with your EmailJS user ID
+  })();
+</script>
+
+   
+</head>
+<body>
+  <header>
+    <div class="logo">RakiRavi</div>
+    <div class="menu-toggle" id="menu-toggle">
+      <i class="fas fa-bars"></i>
+    </div>
+    <nav id="nav-menu">
+      <a href="index.html" class="active">Home</a>
+      <a href="#services">Services</a>
+      <a href="#resume">Resume</a>
+      <a href="#project">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+  
+
+  <section class="home">
+    <div class="left">
+      <h3 class="greeting">Hello <span class="wave">👋</span></h3>
+      <h1 style="color: white;">Rakesh Ravikumar</h1>
+      <h2 style="color: aliceblue;">I’m a <span class="animated-word" id="type-effect"></span></h2>
+      <p>Hello! I'm Rakesh R, a passionate web developer and designer with a knack for creating beautiful, user-friendly digital experiences. I enjoy turning complex problems into simple, elegant solutions. Let's build something amazing together!</p>
+
+      <div class="action-bar">
+        <a href="Rakesh R resume`1.pdf" download class="btn">Download Resume</a>
+        <div class="social-icons">
+          <a href="https://github.com/Rakesh200416" class="icon"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/rakesh-r-7ba9a6284/" class="icon"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.instagram.com/rakesh_ravikumar_ald?igsh=MThldXNsdnZ0ZzE3ZA==" class="icon"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.youtube.com/@RR_Solutions_4ever" class="icon"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="right">
+        <div class="image-wrapper">
+            <div class="circle circle1"></div>
+            <div class="circle circle2"></div>
+            <img src="photo/Raki-removebg-preview.png" alt="profile" />
+          </div>
+          
+    </div>
+  </section>
+
+         <!-- ----- service start ----- -->
+
+         <!-- Just the service section + modals -->
+<section id="services" class="services-section">
+  <h2>My <span>Services</span></h2>
+  <div class="services-container">
+    <!-- Service Cards -->
+    <div class="service-card">
+      <i class="fas fa-code"></i>
+      <h3 id="r">Web Development</h3>
+      <p>Build responsive, user-friendly websites with modern tech stacks.</p>
+      <span class="arrow" data-service="web">→</span>
+    </div>
+
+    <div class="service-card">
+      <i class="fas fa-laptop-code"></i>
+      <h3 id="r">Software Development</h3>
+      <p>Create desktop & enterprise apps with scalability in mind.</p>
+      <span class="arrow" data-service="software">→</span>
+    </div>
+
+    <div class="service-card">
+      <i class="fas fa-chart-line"></i>
+      <h3 id="r">Data Analytics</h3>
+      <p>Convert data to insights using Python, SQL, and dashboards.</p>
+      <span class="arrow" data-service="data">→</span>
+    </div>
+
+    <div class="service-card">
+      <i class="fas fa-pencil-ruler"></i>
+      <h3 id="r">UI/UX Design</h3>
+      <p>Design modern, clean, and user-focused interfaces.</p>
+      <span class="arrow" data-service="uiux">→</span>
+    </div>
+
+    <div class="service-card highlight">
+      <i class="fas fa-paint-brush"></i>
+      <h3 id="r">Graphic Design</h3>
+      <p>Craft logos, posters, & visual assets for digital platforms.</p>
+      <span class="arrow" data-service="graphic">→</span>
+    </div>
+
+    <div class="service-card">
+      <i class="fas fa-video"></i>
+      <h3 id="r">Video Editing</h3>
+      <p>Make cinematic, engaging videos for clients & social media.</p>
+      <span class="arrow" data-service="video">→</span>
+    </div>
+  </div>
+</section>
+
+<!-- Modal -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h3 id="modal-title"></h3>
+    <p id="modal-text"></p>
+  </div>
+</div>
+
+
+<!-- ----- resume start ----- -->
+<section class="resume-section" id="resume">
+  <div class="resume-container">
+    <div class="resume-left">
+      <h2 class="section-title">Why Hire Me?</h2>
+      <p class="section-description">
+        I'm dedicated, experienced, and ready to contribute with strong development skills and a passion for learning.
+      </p>
+      <div class="resume-tabs">
+        <button class="tab-btn active" onclick="showTab(event, 'experience')">Internship</button>
+        <button class="tab-btn" onclick="showTab(event, 'education')">Education</button>
+        <button class="tab-btn" onclick="showTab(event, 'skills')">Skills</button>
+        <button class="tab-btn" onclick="showTab(event, 'about')">About Me</button>
+      </div>
+    </div>
+
+    <div class="resume-right">
+      <!-- Internship Tab -->
+      <div class="tab-content active" id="experience">
+        <div class="tab-header">Internship</div>
+        <p class="tab-description">Here are some of my key internship experiences.</p>
+        <div class="resume-card-container">
+          <div class="resume-card">
+            <span>December 23rd, 2024</span>
+            <h3>Data Visualization Intern</h3>
+            <h4>Tata</h4>
+            <p>
+              Worked on transforming complex data sets into insightful and interactive visual representations.
+              <br>
+              Utilized tools such as Power BI and Tableau for dashboards, along with Python libraries like Matplotlib and Seaborn for custom visualizations.
+              <br>
+              Focused on delivering clear and data-driven insights to support business decision-making processes.
+            </p>
+          </div>
+          <div class="resume-card">
+            <span>Present</span>
+            <h3>Full Stack Development (MERN)</h3>
+            <h4>Edu-Versity (Wipro-based Company)</h4>
+            <p>Built interactive web applications using the MERN stack.  <br>
+             It was a 3-month, stipend-based internship that provided hands-on experience in full stack development.</p>
+          </div>
+          <div class="resume-card">
+            <span>April - May (Present)</span>
+            <h3>Java Full Stack Developer</h3>
+            <h4>Zidio Developments</h4>
+            <p>Working as a Java Full Stack Developer, contributing to the design and development of responsive web applications.  
+            <br>
+             Involved in both frontend and backend development using technologies such as Java, Spring Boot, HTML, CSS, JavaScript, and MySQL.  
+             <br>Collaborating with the development team to build scalable and efficient solutions.</p>
+          </div>
+          
+        </div>
+      </div>
+
+      <!-- Education Tab -->
+      <div class="tab-content" id="education">
+        <div class="tab-header">Education</div>
+        <p class="tab-description">My academic background is listed below.</p>
+        <div class="resume-card-container">
+          <div class="resume-card">
+            <span>2017 – 2020</span>
+            <h3>SSLC – General</h3>
+            <h4>Karnataka Secondary Education Examination Board (KSEEB)</h4>
+            <p>
+              Scored 85.76% during secondary education. Built a strong foundation in core subjects and general education.
+            </p>
+          </div>
+          
+          <div class="resume-card">
+            <span>2020 – 2022</span>
+            <h3>PUC – PCMB</h3>
+            <h4>Karnataka School Examination and Assessment Board (KSEAB)</h4>
+            <p>
+              Secured 75.66% in the Pre-University Course with subjects: Physics, Chemistry, Mathematics, and Biology (PCMB).
+            </p>
+          </div>
+          
+          <div class="resume-card">
+            <span>2022 – 2026</span>
+            <h3>Bachelor of Engineering</h3>
+            <h4>Shridevi Institute of Engineering and Technology, VTU</h4>
+            <p>
+              Major in Information Science and Engineering with a CGPA of 9.01*.  
+              <br>
+              Focused on full-stack development, data structures, and hands-on project-based learning.
+            </p>
+          </div>
+          
+        </div>
+      </div>
+
+      <!-- Skills Tab -->
+      <div class="tab-content" id="skills">
+        <div class="tab-header">Skills</div>
+        <p class="tab-description">Technologies and tools I work with.</p>
+        <div class="skills-grid">
+          <div class="skills-container">
+            <div class="skill-box" title="Java">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java">
+            </div>
+            <div class="skill-box" title="Python">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+            </div>
+            <div class="skill-box" title="C">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C">
+            </div>
+            <div class="skill-box" title="C++">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++">
+            </div>
+            <div class="skill-box" title="HTML5">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5">
+            </div>
+            <div class="skill-box" title="CSS3">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3">
+            </div>
+            <div class="skill-box" title="JavaScript">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
+            </div>
+            <div class="skill-box" title="React">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React">
+            </div>
+            <div class="skill-box" title="Node.js">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js">
+            </div>
+            <div class="skill-box" title="SQL">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg" alt="SQL">
+            </div>
+            <div class="skill-box" title="MySQL">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL">
+            </div>
+            <div class="skill-box" title="MongoDB">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB">
+            </div>
+            <div class="skill-box" title="Tableau">
+              <img src="https://www.svgrepo.com/show/354427/tableau.svg" alt="Tableau">
+            </div>
+            <div class="skill-box" title="Power BI">
+              <img src="https://raw.githubusercontent.com/microsoft/PowerBI-Icons/main/SVG/Power-BI.svg" alt="Power BI">
+            </div>
+            <div class="skill-box" title="PHP">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP">
+            </div>
+            <div class="skill-box" title="Express">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express">
+            </div>
+            <div class="skill-box" title="Git">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
+            </div>
+            <div class="skill-box" title="GitHub">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub">
+            </div>
+          </div>
+          
+        </div>
+      </div>
+
+      <!-- About Tab -->
+      <div class="tab-content" id="about">
+        <div class="tab-header">About Me</div>
+        <p class="tab-description">Here's a quick summary of who I am and how to reach me.</p>
+        <div class="resume-card-container1">
+          <div class="myidea">
+            <p><strong>Name:</strong> Rakesh R</p>
+            <p><strong>Age:</strong> 22</p>
+            <p><strong>Qualification:</strong> B.E in Information Science</p>
+            <p><strong>Contact No:</strong> +91 6360075529</p>
+            <p><strong>Email:</strong> rakeshravikumarap@gmail.com</p>
+            <p><strong>Address:</strong> Tumakuru, Karnataka, India</p>
+            <p><strong>Languages Known:</strong> English, Kannada, Hindi</p>
+            <p><strong>Status:</strong> Currently Studying and Seeking Internship Opportunities</p>
+          </div>
+          
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Project section starts -->
+
+<section class="project-section" id="project">
+  <h2>My <span style="color:#00cc66;">Projects</span></h2>
+  <div class="project-grid">
+
+    <!-- Project: FoodieHub -->
+    <div class="project-card">
+      <div class="icon-container">
+        <i class="fas fa-utensils"></i>
+      </div>      
+      <h3>FoodieHub</h3>
+      <p>Food delivery platform with smart filtering and ratings.</p>
+      <div class="card-overlay">
+        <a href="https://github.com/Rakesh200416" target="_blank">
+          View on GitHub <span class="arrow">↗</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Project: HireHub -->
+    <div class="project-card">
+      <div class="icon-container">
+        <i class="fas fa-briefcase"></i>
+      </div>  
+      <h3>HireHub</h3>
+      <p>Job portal for seekers & recruiters with admin dashboard.</p>
+      <div class="card-overlay">
+        <a href="https://github.com/Rakesh200416" target="_blank">
+          View on GitHub <span class="arrow">↗</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Project: EasyCare -->
+    <div class="project-card">
+      <div class="icon-container">
+        <i class="fas fa-heartbeat"></i>
+      </div>  
+      <h3>EasyCare</h3>
+      <p>Rural health support system with chat, video, and reminders.</p>
+      <div class="card-overlay">
+        <a href="https://github.com/Rakesh200416" target="_blank">
+          View on GitHub <span class="arrow">↗</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Project: Online Exam Management -->
+    <div class="project-card">
+      <div class="icon-container">
+        <i class="fas fa-laptop-code"></i>
+      </div>  
+      <h3>Online Exam Management</h3>
+      <p>Ongoing platform for managing exams, results, and scheduling.</p>
+      <div class="card-overlay">
+        <a href="https://github.com/Rakesh200416" target="_blank">
+          View on GitHub <span class="arrow">↗</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Project: College Website -->
+    <div class="project-card">
+      <div class="icon-container">
+        <i class="fas fa-school"></i>
+      </div>  
+      <h3>College Website</h3>
+      <p>Responsive college site using full stack (HTML, CSS, JS, PHP).</p>
+      <div class="card-overlay">
+        <a href="https://github.com/Rakesh200416" target="_blank">
+          View on GitHub <span class="arrow">↗</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Contact me sevtion starts-->
+<section class="contact" id="contact">
+  <div class="contact-left">
+    <h2 class="fade-in">Let's Work Together</h2>
+    <p class="fade-in delay-1">
+      I'm always open to discussing new opportunities, collaborations, or web development. Whether you have a question, a project idea, or Any thing about project, feel free to reach out—I'd love to connect with you!
+    </p>
+    
+
+    <div class="contact-info fade-in delay-2">
+      <div class="info-box">
+        <i class="fas fa-phone icon"></i>
+        <div>
+          <h4>Phone</h4>
+          <p>+91 6360075529</p>
+        </div>
+      </div>
+      <div class="info-box">
+        <i class="fas fa-envelope icon"></i>
+        <div>
+          <h4>Email</h4>
+          <p>rakeshravikumarap@gmail.com</p>
+        </div>
+      </div>
+      <div class="info-box">
+        <i class="fas fa-map-marker-alt icon"></i>
+        <div>
+          <h4>Address</h4>
+          <p>Tumakuru,Karnataka,India  572106</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="contact-right fade-in delay-3">
+    
+    <form id="contact-form">
+      <h2 class="center-heading">Contact <span>Me!</span></h2>
+      <div class="input-row">
+        <input type="text" name="from_name" placeholder="Full Name" required>
+        <input type="email" name="email" placeholder="Email Address" required>
+      </div>
+      <div class="input-row">
+        <input type="text" name="phone" placeholder="Phone Number" required>
+        <input type="text" name="subject" placeholder="Email Subject" required>
+      </div>
+      <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <p id="status-message"></p>
+  </div>
+</section>
+
+      
+</body>
+</html>
